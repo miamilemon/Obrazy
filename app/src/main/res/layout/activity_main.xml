@@ -10,121 +10,117 @@
         android:id="@+id/button"
         android:layout_width="66dp"
         android:layout_height="52dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         android:visibility="visible"
         app:icon="@drawable/lewo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button2"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.761"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextWysokosc" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextWysokosc"
+        app:layout_constraintVertical_bias="0.191" />
 
     <Button
         android:id="@+id/button2"
         android:layout_width="66dp"
         android:layout_height="52dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="16dp"
         app:icon="@drawable/usun"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button3"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.917"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextWysokosc" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextWysokosc"
+        app:layout_constraintVertical_bias="0.191" />
 
     <Button
         android:id="@+id/button3"
         android:layout_width="66dp"
         android:layout_height="52dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="16dp"
         app:icon="@drawable/kamera"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/button4"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.929"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSzerokosc" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSzerokosc"
+        app:layout_constraintVertical_bias="0.185" />
 
     <Button
         android:id="@+id/button4"
         android:layout_width="66dp"
         android:layout_height="52dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="52dp"
-        android:layout_marginBottom="16dp"
         app:icon="@drawable/prawo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintHorizontal_bias="0.849"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSzerokosc" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextSzerokosc"
+        app:layout_constraintVertical_bias="0.185" />
 
     <ImageView
         android:id="@+id/imageViewZdj"
-        android:layout_width="324dp"
-        android:layout_height="525dp"
-        android:layout_marginTop="26dp"
+        android:layout_width="260dp"
+        android:layout_height="375dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintHorizontal_bias="0.496"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.0"
+        app:layout_constraintVertical_bias="0.151"
+        app:srcCompat="@drawable/musztarda"
         tools:srcCompat="@drawable/musztarda" />
 
     <CheckBox
         android:id="@+id/checkBoxWidok"
         android:layout_width="148dp"
-        android:layout_height="39dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="12dp"
+        android:layout_height="40dp"
         android:checked="true"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextRotacja"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewZdj"
+        app:layout_constraintVertical_bias="0.077"
         tools:text="Widok" />
 
     <EditText
         android:id="@+id/editTextWysokosc"
         android:layout_width="148dp"
         android:layout_height="40dp"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="6dp"
-        android:layout_marginEnd="12dp"
         android:ems="10"
         android:inputType="number"
         android:text="Wysokosc"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/editTextSzerokosc"
+        app:layout_constraintHorizontal_bias="0.809"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok"
+        app:layout_constraintVertical_bias="0.047" />
 
     <EditText
         android:id="@+id/editTextSzerokosc"
         android:layout_width="148dp"
         android:layout_height="40dp"
         android:layout_marginTop="6dp"
-        android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="number"
         android:text="Szerokosc"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja" />
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
+        app:layout_constraintVertical_bias="0.023" />
 
     <EditText
         android:id="@+id/editTextRotacja"
-        android:layout_width="147dp"
-        android:layout_height="43dp"
-        android:layout_marginTop="14dp"
-        android:layout_marginEnd="52dp"
+        android:layout_width="148dp"
+        android:layout_height="40dp"
         android:ems="10"
         android:inputType="number"
         android:text="Pochylenie"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewZdj" />
+        app:layout_constraintHorizontal_bias="0.802"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewZdj"
+        app:layout_constraintVertical_bias="0.074" />
 </androidx.constraintlayout.widget.ConstraintLayout>
