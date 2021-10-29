@@ -95,24 +95,26 @@
         android:layout_width="148dp"
         android:layout_height="40dp"
         android:layout_marginStart="52dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="12dp"
         android:ems="10"
         android:inputType="number"
         android:text="Wysokosc"
         app:layout_constraintEnd_toStartOf="@+id/editTextSzerokosc"
         app:layout_constraintStart_toStartOf="parent"
-        tools:layout_editor_absoluteY="614dp" />
+        app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok" />
 
     <EditText
         android:id="@+id/editTextSzerokosc"
         android:layout_width="148dp"
         android:layout_height="40dp"
+        android:layout_marginTop="6dp"
         android:layout_marginEnd="52dp"
         android:ems="10"
         android:inputType="number"
         android:text="Szerokosc"
         app:layout_constraintEnd_toEndOf="parent"
-        tools:layout_editor_absoluteY="614dp" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja" />
 
     <EditText
         android:id="@+id/editTextRotacja"
