@@ -45,7 +45,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok"
         app:layout_constraintVertical_bias="0.059"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
+        android:importantForAutofill="no" />
 
     <EditText
         android:id="@+id/editTextRotacja"
@@ -67,13 +68,15 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="48dp"
         android:layout_marginBottom="112dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/buttonClear"
         app:layout_constraintHorizontal_bias="0.176"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_lewo" />
+        app:srcCompat="@drawable/ic_lewo"
+        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
     <ImageButton
         android:id="@+id/buttonClear"
@@ -87,7 +90,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_usun" />
+        app:srcCompat="@drawable/ic_usun"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/buttonKamera"
@@ -101,7 +105,8 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_kamera" />
+        app:srcCompat="@drawable/ic_kamera"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <ImageButton
         android:id="@+id/buttonPrawo"
@@ -114,5 +119,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
         app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_prawo" />
+        app:srcCompat="@drawable/ic_prawo"
+        tools:ignore="TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>
