@@ -3,10 +3,7 @@ package com.example.obrazy
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import android.widget.Button
-import android.widget.CheckBox
-import android.widget.EditText
-import android.widget.ImageView
+import android.widget.*
 import androidx.core.app.ActivityCompat
 import androidx.core.widget.doOnTextChanged
 
@@ -20,9 +17,9 @@ class MainActivity : AppCompatActivity() {
 
         var img = findViewById<ImageView>(R.id.imageViewZdj)
         var widok = findViewById<CheckBox>(R.id.checkBoxWidok)
-        var lewo = findViewById<Button>(R.id.buttonLeft)
-        var prawo = findViewById<Button>(R.id.buttonPrawo)
-        var usun = findViewById<Button>(R.id.buttonClear)
+        var lewo = findViewById<ImageButton>(R.id.buttonLeft)
+        var prawo = findViewById<ImageButton>(R.id.buttonPrawo)
+        var usun = findViewById<ImageButton>(R.id.buttonClear)
         var rotacja = findViewById<EditText>(R.id.editTextRotacja)
         var skala = findViewById<EditText>(R.id.editTextSkala)
         var currentlyselected = 0;

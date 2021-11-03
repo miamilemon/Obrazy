@@ -6,59 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageButton
-        android:id="@+id/buttonLeft"
-        android:layout_width="66dp"
-        android:layout_height="52dp"
-        android:src="@drawable/ic_lewo"
-        android:visibility="visible"
-        app:icon="@drawable/lewo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonClear"
-        app:layout_constraintHorizontal_bias="0.761"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
-        app:layout_constraintVertical_bias="0.185" />
-
-    <ImageButton
-        android:id="@+id/buttonClear"
-        android:layout_width="66dp"
-        android:layout_height="52dp"
-        android:src="@drawable/ic_usun"
-        app:icon="@drawable/usun"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonKamera"
-        app:layout_constraintHorizontal_bias="0.917"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
-        app:layout_constraintVertical_bias="0.185" />
-
-    <ImageButton
-        android:id="@+id/buttonKamera"
-        android:layout_width="66dp"
-        android:layout_height="52dp"
-        android:src="@drawable/ic_kamera"
-        app:icon="@drawable/kamera"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonPrawo"
-        app:layout_constraintHorizontal_bias="0.929"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
-        app:layout_constraintVertical_bias="0.185" />
-
-    <ImageButton
-        android:id="@+id/buttonPrawo"
-        android:layout_width="66dp"
-        android:layout_height="52dp"
-        android:src="@drawable/ic_prawo"
-        app:icon="@drawable/prawo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
-        app:layout_constraintVertical_bias="0.185" />
-
     <ImageView
         android:id="@+id/imageViewZdj"
         android:layout_width="260dp"
@@ -82,7 +29,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewZdj"
-        app:layout_constraintVertical_bias="0.0" />
+        app:layout_constraintVertical_bias="0.0"
+        tools:ignore="TouchTargetSizeCheck" />
 
     <EditText
         android:id="@+id/editTextSkala"
@@ -96,7 +44,8 @@
         app:layout_constraintHorizontal_bias="0.802"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok"
-        app:layout_constraintVertical_bias="0.059" />
+        app:layout_constraintVertical_bias="0.059"
+        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
 
     <EditText
         android:id="@+id/editTextRotacja"
@@ -111,4 +60,59 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok"
         app:layout_constraintVertical_bias="0.059" />
+
+    <ImageButton
+        android:id="@+id/buttonLeft"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="48dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonClear"
+        app:layout_constraintHorizontal_bias="0.176"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_lewo" />
+
+    <ImageButton
+        android:id="@+id/buttonClear"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonKamera"
+        app:layout_constraintHorizontal_bias="0.977"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_usun" />
+
+    <ImageButton
+        android:id="@+id/buttonKamera"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="212dp"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/buttonPrawo"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_kamera" />
+
+    <ImageButton
+        android:id="@+id/buttonPrawo"
+        android:layout_width="66dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="112dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.849"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_prawo" />
 </androidx.constraintlayout.widget.ConstraintLayout>
