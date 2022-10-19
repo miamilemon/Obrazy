@@ -9,6 +9,10 @@ import androidx.core.widget.doOnTextChanged
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
+import android.graphics.Color
+import android.graphics.ColorFilter
+import android.graphics.LightingColorFilter
+import android.graphics.PorterDuff
 import android.provider.MediaStore
 import android.widget.ImageView
 import androidx.core.app.ActivityCompat
@@ -23,6 +27,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var rotacjaY : SeekBar
     lateinit var przezroczystosc : SeekBar
     lateinit var widok : CheckBox
+    lateinit var red : Button
+    lateinit var green : Button
+    lateinit var blue : Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
@@ -35,6 +42,10 @@ class MainActivity : AppCompatActivity() {
         rotacjaX = findViewById(R.id.seekBarRotacjaX)
         rotacjaY = findViewById(R.id.seekBarRotacjaY)
         przezroczystosc = findViewById(R.id.seekBarPrzezroczystosc)
+        red = findViewById(R.id.buttonFiltrRed)
+        green = findViewById(R.id.buttonFiltrGreen)
+        blue = findViewById(R.id.buttonFiltrBlue)
+
         var currentlyselected = 0;
         val zdjecia =
             arrayOf(R.drawable.musztarda, R.drawable.szef, R.drawable.szefsyn2, R.drawable.zupka)
@@ -67,37 +78,74 @@ class MainActivity : AppCompatActivity() {
             img.setImageBitmap(null)
         }
 
-        rotacjaX.setOnClickListener {
-            var wartosc = rotacjaX.progress.toString()
-            if (wartosc.isNotEmpty()) {
-                var floatwartosc = wartosc.toFloat()
-                img.rotationX = floatwartosc
+        rotacjaX.setOnSeekBarChangeListener(
+            object : SeekBar.OnSeekBarChangeListener{
+                override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                    var zmienna = rotacjaX.getProgress().toFloat()
+                    img.rotationX = zmienna
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+                }
+
+                override fun onStopTrackingTouch(seekBar: SeekBar?) {
+
+                }
+
             }
+        )
+
+        rotacjaY.setOnSeekBarChangeListener(
+            object : SeekBar.OnSeekBarChangeListener{
+                override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                    var zmienna = rotacjaY.getProgress().toFloat()
+                    img.rotationY = zmienna
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+                }
+
+                override fun onStopTrackingTouch(seekBar: SeekBar?) {
+
+                }
+
+            }
+        )
+
+        przezroczystosc.setOnSeekBarChangeListener(
+            object : SeekBar.OnSeekBarChangeListener{
+                override fun onProgressChanged(seekBar: SeekBar, progress: Int, fromUser: Boolean) {
+                    var zmienna = przezroczystosc.getProgress()
+                    img.imageAlpha = zmienna
+                }
+
+                override fun onStartTrackingTouch(seekBar: SeekBar?) {
+
+                }
+
+                override fun onStopTrackingTouch(seekBar: SeekBar?) {
+                }
+
+            }
+        )
+
+        red.setOnClickListener{
+            val colorFilter = LightingColorFilter(Color.WHITE, Color.RED)
+            img.setColorFilter(colorFilter)
         }
 
-        rotacjaX.setOnClickListener {
-            var wartosc = rotacjaX.progress.toString()
-            if (wartosc.isNotEmpty()) {
-                var floatwartosc = wartosc.toFloat()
-                img.rotationX = floatwartosc
-            }
+        green.setOnClickListener{
+            val colorFilter = LightingColorFilter(Color.WHITE, Color.GREEN)
+            img.setColorFilter(colorFilter)
         }
 
-        rotacjaY.setOnClickListener {
-            var wartosc = rotacjaY.progress.toString()
-            if (wartosc.isNotEmpty()) {
-                var floatwartosc = wartosc.toFloat()
-                img.rotationY = floatwartosc
-            }
+        blue.setOnClickListener{
+            val colorFilter = LightingColorFilter(Color.WHITE, Color.BLUE)
+            img.setColorFilter(colorFilter)
         }
 
-        przezroczystosc.setOnClickListener {
-            var wartosc = przezroczystosc.progress.toString()
-            if (wartosc.isNotEmpty()) {
-                var floatwartosc = wartosc.toInt()
-                img.imageAlpha = floatwartosc
-            }
-        }
 
         zrobzdjecie.isEnabled = false
         if(ActivityCompat.checkSelfPermission(this, Manifest.permission.CAMERA)!=PackageManager.PERMISSION_GRANTED){
