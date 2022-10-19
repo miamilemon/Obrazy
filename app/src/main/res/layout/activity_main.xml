@@ -41,7 +41,6 @@
                     android:id="@+id/seekBarRotacjaX"
                     android:layout_width="150dp"
                     android:layout_height="40dp"
-                    android:hint="@string/rotacjaY"
                     android:min="1"
                     android:max="360" />
             </LinearLayout>
@@ -61,7 +60,6 @@
                 android:id="@+id/seekBarRotacjaY"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
-                android:hint="@string/rotacjaY"
                 android:min="1"
                 android:max="360" />
         </LinearLayout>
@@ -81,9 +79,8 @@
                 android:id="@+id/seekBarPrzezroczystosc"
                 android:layout_width="150dp"
                 android:layout_height="40dp"
-                android:hint="@string/rotacjaY"
-                android:min="1"
-                android:max="100" />
+                android:min="0"
+                android:max="255" />
         </LinearLayout>
 
         <LinearLayout
