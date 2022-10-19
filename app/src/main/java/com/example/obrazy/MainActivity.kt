@@ -19,8 +19,9 @@ class MainActivity : AppCompatActivity() {
     lateinit var prawo: ImageButton
     lateinit var usun: ImageButton
     private lateinit var img : ImageView
-    lateinit var rotacja : EditText
-    lateinit var skala : EditText
+    lateinit var rotacjaX : SeekBar
+    lateinit var rotacjaY : SeekBar
+    lateinit var przezroczystosc : SeekBar
     lateinit var widok : CheckBox
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -31,8 +32,9 @@ class MainActivity : AppCompatActivity() {
         lewo = findViewById(R.id.buttonLeft)
         prawo = findViewById(R.id.buttonPrawo)
         usun = findViewById(R.id.buttonClear)
-        rotacja = findViewById(R.id.editTextRotacja)
-        skala = findViewById(R.id.editTextSkala)
+        rotacjaX = findViewById(R.id.seekBarRotacjaX)
+        rotacjaY = findViewById(R.id.seekBarRotacjaY)
+        przezroczystosc = findViewById(R.id.seekBarPrzezroczystosc)
         var currentlyselected = 0;
         val zdjecia =
             arrayOf(R.drawable.musztarda, R.drawable.szef, R.drawable.szefsyn2, R.drawable.zupka)
@@ -65,20 +67,35 @@ class MainActivity : AppCompatActivity() {
             img.setImageBitmap(null)
         }
 
-        rotacja.doOnTextChanged { text, start, before, count ->
-            var wartosc = rotacja.text.toString()
+        rotacjaX.setOnClickListener {
+            var wartosc = rotacjaX.progress.toString()
             if (wartosc.isNotEmpty()) {
                 var floatwartosc = wartosc.toFloat()
-                img.rotation = floatwartosc
+                img.rotationX = floatwartosc
             }
         }
 
-        skala.doOnTextChanged { text, start, before, count ->
-            var wartosc = skala.text.toString()
+        rotacjaX.setOnClickListener {
+            var wartosc = rotacjaX.progress.toString()
             if (wartosc.isNotEmpty()) {
                 var floatwartosc = wartosc.toFloat()
-                img.scaleX = floatwartosc
-                img.scaleY = floatwartosc
+                img.rotationX = floatwartosc
+            }
+        }
+
+        rotacjaY.setOnClickListener {
+            var wartosc = rotacjaY.progress.toString()
+            if (wartosc.isNotEmpty()) {
+                var floatwartosc = wartosc.toFloat()
+                img.rotationY = floatwartosc
+            }
+        }
+
+        przezroczystosc.setOnClickListener {
+            var wartosc = przezroczystosc.progress.toString()
+            if (wartosc.isNotEmpty()) {
+                var floatwartosc = wartosc.toInt()
+                img.imageAlpha = floatwartosc
             }
         }
 

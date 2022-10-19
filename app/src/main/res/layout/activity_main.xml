@@ -6,119 +6,149 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <ImageView
-        android:id="@+id/imageViewZdj"
-        android:layout_width="260dp"
-        android:layout_height="375dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.157"
-        app:srcCompat="@drawable/musztarda"
-        tools:srcCompat="@drawable/musztarda" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/label"
+            android:textSize="24dp"
+            android:layout_marginTop="10dp"
+            android:layout_gravity="center"/>
+        <ImageView
+            android:id="@+id/imageViewZdj"
+            android:layout_width="260dp"
+            android:layout_height="375dp"
+            android:layout_gravity="center"
+            app:srcCompat="@drawable/musztarda"
+            tools:srcCompat="@drawable/musztarda" />
 
-    <CheckBox
-        android:id="@+id/checkBoxWidok"
-        android:layout_width="148dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="18dp"
-        android:text="@string/pokaz_obraz"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewZdj"
-        app:layout_constraintVertical_bias="0.0"
-        tools:ignore="TouchTargetSizeCheck" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:text="@string/rotacjaX"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:textSize="24dp"/>
+                <SeekBar
+                    android:id="@+id/seekBarRotacjaX"
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:hint="@string/rotacjaY" />
+            </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextSkala"
-        android:layout_width="148dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="@string/skala"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.802"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok"
-        app:layout_constraintVertical_bias="0.059"
-        tools:ignore="TouchTargetSizeCheck,TextContrastCheck"
-        android:importantForAutofill="no" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="@string/rotacjaY"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="24dp"/>
+            <SeekBar
+                android:id="@+id/seekBarRotacjaY"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="@string/rotacjaY" />
+        </LinearLayout>
 
-    <EditText
-        android:id="@+id/editTextRotacja"
-        android:layout_width="148dp"
-        android:layout_height="40dp"
-        android:ems="10"
-        android:hint="@string/rotacja"
-        android:inputType="number"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/editTextSkala"
-        app:layout_constraintHorizontal_bias="0.809"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/checkBoxWidok"
-        app:layout_constraintVertical_bias="0.059" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:text="@string/przezroczystosc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="24dp"/>
+            <SeekBar
+                android:id="@+id/seekBarPrzezroczystosc"
+                android:layout_width="150dp"
+                android:layout_height="40dp"
+                android:hint="@string/rotacjaY" />
+        </LinearLayout>
 
-    <ImageButton
-        android:id="@+id/buttonLeft"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="48dp"
-        android:layout_marginBottom="112dp"
-        android:contentDescription="@string/todo"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonClear"
-        app:layout_constraintHorizontal_bias="0.176"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_lewo"
-        tools:ignore="TouchTargetSizeCheck,SpeakableTextPresentCheck" />
 
-    <ImageButton
-        android:id="@+id/buttonClear"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="12dp"
-        android:layout_marginBottom="112dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonKamera"
-        app:layout_constraintHorizontal_bias="0.977"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextRotacja"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_usun"
-        tools:ignore="TouchTargetSizeCheck" />
 
-    <ImageButton
-        android:id="@+id/buttonKamera"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="212dp"
-        android:layout_marginBottom="112dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonPrawo"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_kamera"
-        tools:ignore="TouchTargetSizeCheck" />
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_gravity="center">
+            <ImageButton
+                android:id="@+id/buttonLeft"
+                android:layout_width="66dp"
+                android:layout_height="44dp"
+                android:contentDescription="@string/todo"
+                app:srcCompat="@drawable/ic_lewo" />
 
-    <ImageButton
-        android:id="@+id/buttonPrawo"
-        android:layout_width="66dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="112dp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.849"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSkala"
-        app:layout_constraintVertical_bias="1.0"
-        app:srcCompat="@drawable/ic_prawo"
-        tools:ignore="TouchTargetSizeCheck" />
+            <ImageButton
+                android:id="@+id/buttonClear"
+                android:layout_width="66dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/ic_usun" />
+
+            <ImageButton
+                android:id="@+id/buttonKamera"
+                android:layout_width="66dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/ic_kamera" />
+
+            <ImageButton
+                android:id="@+id/buttonPrawo"
+                android:layout_width="66dp"
+                android:layout_height="44dp"
+                app:srcCompat="@drawable/ic_prawo" />
+        </LinearLayout>
+        <TextView
+            android:text="@string/filtry"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:textSize="24dp"/>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_margin="10dp"
+            android:layout_gravity="center">
+            <Button
+                android:id="@+id/buttonFiltrRed"
+                android:backgroundTint="@android:color/holo_red_light"
+                android:layout_width="66dp"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/buttonFiltrGreen"
+                android:backgroundTint="@android:color/holo_green_light"
+                android:layout_width="66dp"
+                android:layout_height="44dp"/>
+            <Button
+                android:id="@+id/buttonFiltrBlue"
+                android:backgroundTint="@android:color/holo_blue_light"
+                android:layout_width="66dp"
+                android:layout_height="44dp"/>
+        </LinearLayout>
+        <CheckBox
+            android:id="@+id/checkBoxWidok"
+            android:layout_width="148dp"
+            android:layout_height="40dp"
+            android:text="@string/pokaz_obraz" />
+    </LinearLayout>
+
+
+
+
+
+
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>

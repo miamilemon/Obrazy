@@ -1,7 +1,10 @@
 <resources>
     <string name="app_name">Obrazy</string>
     <string name="pokaz_obraz">Przełącz widok</string>
-    <string name="skala">Skala</string>
-    <string name="rotacja">Rotacja</string>
+    <string name="przezroczystosc">Przezroczystość</string>
+    <string name="rotacjaX">Rotacja X</string>
+    <string name="rotacjaY">Rotacja Y</string>
+    <string name="label">Nikodem Mikucki</string>
+    <string name="filtry">Filtry koloru</string>
     <string name="todo">TODO</string>
 </resources>
