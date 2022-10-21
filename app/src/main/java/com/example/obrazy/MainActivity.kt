@@ -35,48 +35,12 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
         zrobzdjecie = findViewById(R.id.buttonKamera)
         img = findViewById(R.id.imageViewZdj)
-        widok = findViewById(R.id.checkBoxWidok)
-        lewo = findViewById(R.id.buttonLeft)
-        prawo = findViewById(R.id.buttonPrawo)
-        usun = findViewById(R.id.buttonClear)
         rotacjaX = findViewById(R.id.seekBarRotacjaX)
         rotacjaY = findViewById(R.id.seekBarRotacjaY)
         przezroczystosc = findViewById(R.id.seekBarPrzezroczystosc)
         red = findViewById(R.id.buttonFiltrRed)
         green = findViewById(R.id.buttonFiltrGreen)
         blue = findViewById(R.id.buttonFiltrBlue)
-
-        var currentlyselected = 0;
-        val zdjecia =
-            arrayOf(R.drawable.musztarda, R.drawable.szef, R.drawable.szefsyn2, R.drawable.zupka)
-
-        widok.setOnCheckedChangeListener { buttonView, isChecked ->
-            if (widok.isChecked) {
-                img.setVisibility(View.INVISIBLE)
-            } else {
-                img.setVisibility(View.VISIBLE)
-            }
-        }
-
-        prawo.setOnClickListener {
-            currentlyselected++;
-            if (currentlyselected == 4) {
-                currentlyselected = 0;
-            }
-            img.setImageResource(zdjecia[currentlyselected])
-        }
-
-        lewo.setOnClickListener {
-            currentlyselected--;
-            if (currentlyselected == -1) {
-                currentlyselected = 3;
-            }
-            img.setImageResource(zdjecia[currentlyselected])
-        }
-
-        usun.setOnClickListener{
-            img.setImageBitmap(null)
-        }
 
         rotacjaX.setOnSeekBarChangeListener(
             object : SeekBar.OnSeekBarChangeListener{
